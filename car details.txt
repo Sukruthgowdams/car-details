@@ -1,0 +1,24 @@
+class Car:
+    def __init__(self,year,make,speed,company,price):
+        self.year=year
+        self.make=make
+        self.speed=speed
+        self.company=company
+        self.price=price      
+        
+    def display_car_details(self):
+        print(str(self.year),"\t", self.speed,"\t","\t",self.company,"\t",str(self.price))
+carobject=[]
+n=int(input("How many car detals \n"))
+for i  in range(n):
+    
+    year = input("Enter car model: \n")
+    make=input("Enter car make: \n")
+    speed = float(input("Enter speed\n"))
+    company=input("Enter company name\n")
+    price= float(input("Enter price : \n"))
+    carobject.append(Car(year,make,speed,company,price))
+print("Car details : \nyear \t speed(km/h) \t company \t price(crore) \n")
+for obj in carobject:
+    obj.display_car_details()
+                 
